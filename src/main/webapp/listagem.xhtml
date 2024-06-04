@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<h:head><title>Cadastro de Moeda</title></h:head>
+	<body>
+		<h:form id="formulario">
+			<p:messages/>
+			<p:link outcome="index" value="voltar"/>
+			<p:dataTable value="#{moedaBean.lista}" var="m">
+				<p:column headerText="Id"><p:outputLabel value="#{m.id}"/></p:column>
+				<p:column headerText="Descriçao"><p:outputLabel value="#{m.descricao}"/></p:column>
+				<p:column headerText="Valor"><p:outputLabel value="#{m.valor}"/></p:column>
+			</p:dataTable>
+		</h:form>
+	</body>
+
+</html>
